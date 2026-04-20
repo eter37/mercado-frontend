@@ -1,7 +1,3 @@
-Necesito actualizar el README del frontend con el link del backend. Reemplaza el contenido del README.md del frontend con esto:
-markdown# MarketSoft - Frontend SPA Supermercado
-
-Single Page Application desarrollada en React que consume la API REST del sistema de supermercado MarketSoft.
 
 ## Integrantes
 
