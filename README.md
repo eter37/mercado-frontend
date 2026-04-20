@@ -1,4 +1,5 @@
-# MarketSoft - Frontend SPA Supermercado
+Necesito actualizar el README del frontend con el link del backend. Reemplaza el contenido del README.md del frontend con esto:
+markdown# MarketSoft - Frontend SPA Supermercado
 
 Single Page Application desarrollada en React que consume la API REST del sistema de supermercado MarketSoft.
 
@@ -17,7 +18,6 @@ Aplicación web SPA que permite gestionar los módulos de un supermercado:
 
 Cada módulo permite visualizar, crear, actualizar y eliminar registros consumiendo la API REST del backend.
 
-
 ## Tecnologías
 
 - React
@@ -28,31 +28,37 @@ Cada módulo permite visualizar, crear, actualizar y eliminar registros consumie
 ## Requisitos previos
 
 - Node.js instalado
-- Tener corriendo el backend en http://localhost:3000
-
-
+- Clonar y ejecutar el backend primero: https://github.com/eter37/backend-actualizado
 
 ## Instrucciones de ejecución
 
-### 1. Iniciar el Backend
+### 1. Clonar y ejecutar el Backend
 
 ```bash
-cd backend
+git clone https://github.com/eter37/backend-actualizado.git
+cd backend-actualizado
 npm install
 npm start
 ```
 
 Debe verse: `Servidor corriendo en http://localhost:3000`
 
-### 2. Iniciar el Frontend
+### 2. Ejecutar el Frontend
 
 ```bash
-cd frontend
 npm install
 npm start
 ```
 
 La aplicación abre automáticamente en http://localhost:3001
+
+## Arquitectura
+Frontend (React) → localhost:3001
+Backend (Express + Sequelize) → localhost:3000
+
+- **pages/** - Páginas de cada módulo con CRUD completo
+- **services/** - Lógica de consumo de API con Axios
+- **components/** - Componentes reutilizables
 
 ## Variables de entorno
 
