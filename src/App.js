@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductsPage from './pages/ProductsPage';
+import UsersPage from './pages/UsersPage';
+import ProvidersPage from './pages/ProvidersPage';
+import SalesPage from './pages/SalesPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <nav className="navbar navbar-expand navbar-dark bg-dark px-4">
+        <span className="navbar-brand">MarketSoft</span>
+        <div className="navbar-nav">
+          <Link className="nav-link" to="/products">Productos</Link>
+          <Link className="nav-link" to="/users">Usuarios</Link>
+          <Link className="nav-link" to="/providers">Proveedores</Link>
+          <Link className="nav-link" to="/sales">Ventas</Link>
+        </div>
+      </nav>
+      <div className="container mt-4">
+        <Routes>
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/users" element={<UsersPage />} />
+          <Route path="/providers" element={<ProvidersPage />} />
+          <Route path="/sales" element={<SalesPage />} />
+          <Route path="/" element={<ProductsPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
